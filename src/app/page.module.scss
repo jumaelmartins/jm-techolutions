@@ -5,6 +5,11 @@
   padding-bottom: 120px;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 600px) {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
 }
 
 .heroBg {
@@ -77,12 +82,20 @@
 .heroTitleGradient {
   display: block;
   font-size: 3.75rem;
+
+  @media (max-width: 600px) {
+    font-size: 2.5rem;
+  }
 }
 
 .heroTitleLine {
   color: var(--text-primary);
   font-size: 3.5rem;
   display: block;
+
+  @media (max-width: 600px) {
+    font-size: 2.25rem;
+  }
 }
 
 .heroSubtitle {
@@ -91,6 +104,11 @@
   margin-bottom: 2.5rem;
   max-width: 500px;
   line-height: 1.7;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+    max-width: 100%;
+  }
 }
 
 .heroButtons {
@@ -114,10 +132,16 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 24px rgba(99, 91, 255, 0.35);
   cursor: pointer;
+  white-space: nowrap;
 
   &:hover {
     box-shadow: 0 8px 40px rgba(99, 91, 255, 0.55);
     transform: translateY(-3px);
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -135,10 +159,16 @@
   backdrop-filter: blur(4px);
   transition: all 0.3s ease;
   cursor: pointer;
+  white-space: nowrap;
 
   &:hover {
     border-color: var(--color-primary);
     background: rgba(99, 91, 255, 0.08);
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -147,6 +177,11 @@
   gap: 2.5rem;
   padding-top: 2rem;
   border-top: 1px solid var(--color-border-soft);
+
+  @media (max-width: 600px) {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
 }
 
 .heroStatValue {
