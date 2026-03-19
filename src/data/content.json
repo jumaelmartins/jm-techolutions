@@ -1,0 +1,237 @@
+{
+  "hero": {
+    "badge": "Soluções sob medida para seu negócio",
+    "title": "Desenvolvimento de sistemas sob medida",
+    "subtitle": "Automação e APIs para empresas que buscam inovação, eficiência e crescimento acelerado.",
+    "cta_primary": "Solicitar Orçamento",
+    "cta_secondary": "Ver Projetos"
+  },
+  "stats": [
+    { "id": 1, "value": 50, "suffix": "+", "label": "Projetos entregues" },
+    { "id": 2, "value": 100, "suffix": "%", "label": "Satisfação" },
+    { "id": 3, "value": 24, "suffix": "/7", "label": "Suporte" }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "icon": "Code2",
+      "title": "Desenvolvimento Web",
+      "description": "Sistemas web completos, dashboards interativos e aplicações sob medida para sua empresa.",
+      "features": ["Sistemas web personalizados", "Plataformas corporativas", "E-commerce e marketplaces"],
+      "techs": ["React", "Node.js", "TypeScript", "PostgreSQL"],
+      "offers": [
+        "Sistemas web personalizados",
+        "Dashboards e painéis administrativos",
+        "Plataformas corporativas",
+        "Portais de clientes",
+        "E-commerce e marketplaces",
+        "Sistemas de gestão (ERP, CRM)"
+      ],
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "icon": "Zap",
+      "title": "Automação de Processos",
+      "description": "Automatize tarefas repetitivas e otimize processos para ganhar tempo e reduzir custos.",
+      "features": ["Bots e assistentes virtuais", "Notificações inteligentes", "Integração de ferramentas"],
+      "techs": ["Node.js", "Python", "Docker", "Redis"],
+      "offers": [
+        "Automação de fluxos de trabalho",
+        "Integração de ferramentas",
+        "Bots e assistentes virtuais",
+        "Processamento automático de dados",
+        "Notificações e alertas inteligentes",
+        "RPA (Robotic Process Automation)"
+      ],
+      "order": 2,
+      "active": true
+    },
+    {
+      "id": 3,
+      "icon": "Link2",
+      "title": "Integrações e APIs",
+      "description": "Conecte sistemas, ERPs, CRMs e qualquer plataforma com APIs robustas e seguras.",
+      "features": ["APIs RESTful e GraphQL", "Webhooks e eventos", "Integrações corporativas"],
+      "techs": ["Node.js", "GraphQL", "REST", "OAuth"],
+      "offers": [
+        "APIs RESTful e GraphQL",
+        "Integração com sistemas legados",
+        "Webhooks e eventos em tempo real",
+        "Conectores para ERPs e CRMs",
+        "Integrações de pagamento",
+        "APIs de terceiros (Google, Stripe, etc)"
+      ],
+      "order": 3,
+      "active": true
+    },
+    {
+      "id": 4,
+      "icon": "Rocket",
+      "title": "MVP para Startups",
+      "description": "Valide sua ideia rapidamente com um produto mínimo viável funcional e escalável.",
+      "features": ["Prototipagem rápida", "Arquitetura escalável", "Entrega em semanas"],
+      "techs": ["Next.js", "React", "Supabase", "Vercel"],
+      "offers": [
+        "Prototipagem e wireframes",
+        "Arquitetura escalável",
+        "Desenvolvimento ágil",
+        "Entrega em semanas",
+        "Feedback contínuo",
+        "Stack moderna e robusta"
+      ],
+      "order": 4,
+      "active": true
+    },
+    {
+      "id": 5,
+      "icon": "BookOpen",
+      "title": "Consultoria Técnica",
+      "description": "Orientação especializada para decisões de arquitetura, tecnologia e processos de desenvolvimento.",
+      "features": ["Revisão de arquitetura", "Code review e boas práticas", "Planejamento técnico"],
+      "techs": ["Agile", "DevOps", "CI/CD", "Cloud"],
+      "offers": [
+        "Revisão de arquitetura",
+        "Code review e boas práticas",
+        "Escolha de stack tecnológico",
+        "Planejamento técnico",
+        "Documentação e treinamento",
+        "Mentoria para equipes"
+      ],
+      "order": 5,
+      "active": true
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "tag": "Sistema Web",
+      "title": "Sistema Financeiro Integrado",
+      "subtitle": "Plataforma completa de gestão financeira com integração bancária e relatórios em tempo real.",
+      "challenge": "Empresa de médio porte enfrentava dificuldades para controlar fluxo de caixa, contas a pagar/receber e conciliação bancária. Processos manuais geravam erros e retrabalho.",
+      "solution": "Desenvolvemos um sistema web completo com dashboard executivo, controle de contas, integração com APIs bancárias para importação automática de extratos, e geração de relatórios gerenciais personalizados.",
+      "results": [
+        "70% de redução no tempo de conciliação bancária",
+        "Eliminação de 95% dos erros de lançamento",
+        "Visibilidade em tempo real do fluxo de caixa",
+        "ROI alcançado em 6 meses"
+      ],
+      "techs": ["React", "Node.js", "PostgreSQL", "TypeScript"],
+      "accentColor": "#635BFF",
+      "image": "",
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "tag": "Automação",
+      "title": "Automação de E-commerce",
+      "subtitle": "Integração total entre loja virtual, ERP e marketplaces com sincronização automática.",
+      "challenge": "Loja com presença em múltiplos canais enfrentava problemas de estoque desatualizado, pedidos duplicados e processos manuais de faturamento.",
+      "solution": "Criamos um hub de integrações que sincroniza estoque em tempo real, processa pedidos automaticamente, gera notas fiscais e notifica clientes.",
+      "results": [
+        "Sincronização de estoque em tempo real",
+        "98% dos pedidos processados automaticamente",
+        "Redução de 80% no trabalho operacional",
+        "Escalonamento para 5x mais pedidos/dia"
+      ],
+      "techs": ["Node.js", "Python", "Redis", "Docker"],
+      "accentColor": "#00D4FF",
+      "image": "",
+      "order": 2,
+      "active": true
+    },
+    {
+      "id": 3,
+      "tag": "MVP Startup",
+      "title": "Plataforma SaaS para RH",
+      "subtitle": "MVP completo de plataforma de gestão de talentos entregue em 3 semanas.",
+      "challenge": "Startup precisava validar seu modelo de negócio de gestão de talentos com investidores. Necessitavam de um produto funcional rapidamente.",
+      "solution": "Utilizamos nossa metodologia de MVP acelerado: priorizamos funcionalidades core, usamos stack moderna com Next.js + Supabase, e entregamos produto funcional em 21 dias.",
+      "results": [
+        "MVP entregue em 3 semanas",
+        "Captação de seed round após demonstração",
+        "50 empresas beta testando no primeiro mês",
+        "Arquitetura suportando 10.000 usuários"
+      ],
+      "techs": ["Next.js", "Supabase", "TypeScript", "Vercel"],
+      "accentColor": "#8A7CFF",
+      "image": "",
+      "order": 3,
+      "active": true
+    },
+    {
+      "id": 4,
+      "tag": "Consultoria",
+      "title": "Modernização de Sistema Legado",
+      "subtitle": "Migração de sistema desktop 15 anos para plataforma web moderna sem parar operações.",
+      "challenge": "Empresa com sistema desktop crítico em VB6, 15 anos de operação. Time interno travado, sem documentação, risco de parada operacional iminente.",
+      "solution": "Conduzimos análise profunda do sistema, mapeamos todos os processos, propusemos arquitetura moderna e executamos migração gradual por módulos, garantindo zero downtime.",
+      "results": [
+        "Migração sem interrupção das operações",
+        "Redução de 60% no tempo de processamento",
+        "Sistema acessível de qualquer dispositivo",
+        "Equipe interna capacitada para manutenção"
+      ],
+      "techs": ["React", "Node.js", "PostgreSQL", "Docker"],
+      "accentColor": "#FF7AD9",
+      "image": "",
+      "order": 4,
+      "active": true
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Carlos Mendes",
+      "role": "CEO, FinançasPro",
+      "initials": "CM",
+      "rating": 5,
+      "text": "A JMTechSolutions transformou nossa operação financeira. O sistema deles reduziu nosso tempo de conciliação em 70%. Entrega impecável e dentro do prazo.",
+      "active": true
+    },
+    {
+      "id": 2,
+      "name": "Ana Paula Silva",
+      "role": "Diretora, LojaExpress",
+      "initials": "AP",
+      "rating": 5,
+      "text": "Implementaram nossa plataforma de e-commerce com integrações complexas em tempo recorde. Equipe extremamente competente e comunicativa.",
+      "active": true
+    },
+    {
+      "id": 3,
+      "name": "Roberto Castro",
+      "role": "CTO, TechLogix",
+      "initials": "RC",
+      "rating": 5,
+      "text": "Parceiros de tecnologia confiáveis. As automações que desenvolveram economizam 40 horas semanais da nossa equipe. Resultado incrível!",
+      "active": true
+    },
+    {
+      "id": 4,
+      "name": "Mariana Oliveira",
+      "role": "Fundadora, StartupLab",
+      "initials": "MO",
+      "rating": 5,
+      "text": "Transformaram minha ideia em um MVP funcional em apenas 3 semanas. A qualidade do código e a atenção aos detalhes são excepcionais.",
+      "active": true
+    },
+    {
+      "id": 5,
+      "name": "Felipe Gomes",
+      "role": "COO, LogisTech",
+      "initials": "FG",
+      "rating": 5,
+      "text": "Integraram nosso ERP com marketplaces em tempo recorde. Reduzimos erros de estoque em 95% e ganhamos muito tempo operacional.",
+      "active": true
+    }
+  ],
+  "contact": {
+    "email": "contato@jmtechsolutions.com.br",
+    "phone": "(11) 99999-9999",
+    "whatsapp": "5511999999999",
+    "location": "São Paulo, SP - Brasil"
+  }
+}

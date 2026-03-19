@@ -1,0 +1,32 @@
+services:
+  site-jmtech:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: site-jmtech:latest
+    container_name: site-jmtech
+    restart: unless-stopped
+
+    ports:
+      - "7000:7000"
+
+    environment:
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+
+    volumes:
+      # Persiste o content.json entre redeployments.
+      # Na primeira execução o volume é inicializado com o
+      # conteúdo padrão da imagem.
+      - site_data:/app/src/data
+
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:7000/api/content"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+volumes:
+  site_data:
+    driver: local

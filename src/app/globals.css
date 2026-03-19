@@ -1,42 +1,245 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import '../styles/theme.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
+html {
+  scroll-behavior: smooth;
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+h1 { font-size: 3.5rem; letter-spacing: -0.02em; }
+h2 { font-size: 2.25rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.125rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+button {
+  cursor: pointer;
+  font-family: inherit;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  .container { padding: 0 1rem; }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 { font-size: 2.625rem; }
+  h2 { font-size: 1.875rem; }
+}
+
+/* ═══════════════════════════════════════
+   ICON & ELEMENT ANIMATIONS
+═══════════════════════════════════════ */
+
+/* Float suave para ícones de serviço */
+@keyframes icon-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-6px) rotate(-2deg); }
+  66%       { transform: translateY(-3px) rotate(2deg); }
+}
+
+/* Pulso de brilho (glow pulsante) */
+@keyframes icon-glow-pulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(99,91,255,0.3); }
+  50%       { box-shadow: 0 4px 32px rgba(99,91,255,0.7), 0 0 40px rgba(0,212,255,0.3); }
+}
+
+/* Brilho para o badge flutuante */
+@keyframes badge-glow {
+  0%, 100% { box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+  50%       { box-shadow: 0 8px 40px rgba(99,91,255,0.5), 0 4px 20px rgba(0,212,255,0.3); }
+}
+
+/* Wiggle rápido para ícone de tecnologia ao hover */
+@keyframes icon-spin {
+  0%   { transform: rotate(0deg) scale(1); }
+  25%  { transform: rotate(-15deg) scale(1.15); }
+  50%  { transform: rotate(15deg) scale(1.2); }
+  75%  { transform: rotate(-8deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+/* Bounce contínuo para o ScrollTop */
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateY(0); }
+  40%       { transform: translateY(-5px); }
+  60%       { transform: translateY(-3px); }
+}
+
+/* Sparkle twinkle */
+@keyframes sparkle-twinkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  25%       { transform: scale(1.3) rotate(20deg); opacity: 0.8; }
+  50%       { transform: scale(0.85) rotate(-10deg); opacity: 1; }
+  75%       { transform: scale(1.2) rotate(15deg); opacity: 0.9; }
+}
+
+/* Estrela pulsante (testimonials) */
+@keyframes star-pulse {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50%       { transform: scale(1.25); filter: brightness(1.4); }
+}
+
+/* Tipagem do cursor no código */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Gradient shift no texto hero */
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Classes utilitárias de animação */
+.icon-float {
+  animation: icon-float 3.5s ease-in-out infinite;
+}
+.icon-float-delay-1 { animation: icon-float 3.5s ease-in-out infinite 0.4s; }
+.icon-float-delay-2 { animation: icon-float 3.5s ease-in-out infinite 0.8s; }
+.icon-float-delay-3 { animation: icon-float 3.5s ease-in-out infinite 1.2s; }
+
+.icon-glow-pulse {
+  animation: icon-glow-pulse 2.5s ease-in-out infinite;
+}
+
+.badge-glow {
+  animation: badge-glow 3s ease-in-out infinite;
+}
+
+.arrow-bounce svg {
+  animation: arrow-bounce 1.6s ease-in-out infinite;
+}
+
+.sparkle-twinkle {
+  animation: sparkle-twinkle 2s ease-in-out infinite;
+}
+
+/* Pill do carrossel: ícone gira ao hover */
+.tech-pill:hover svg {
+  animation: icon-spin 0.5s ease-in-out;
+}
+.tech-pill {
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease !important;
+}
+.tech-pill:hover {
+  color: var(--text-primary) !important;
+  border-color: var(--color-primary) !important;
+  background: rgba(99,91,255,0.12) !important;
+}
+
+/* Gradient text animado */
+.gradient-text-animated {
+  background: linear-gradient(135deg, #635BFF, #8A7CFF, #00D4FF, #635BFF);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s ease infinite;
+}
+
+/* Estrela pulsante no card de depoimento */
+.star-animated:nth-child(1) { animation: star-pulse 2s ease-in-out infinite 0s; }
+.star-animated:nth-child(2) { animation: star-pulse 2s ease-in-out infinite 0.15s; }
+.star-animated:nth-child(3) { animation: star-pulse 2s ease-in-out infinite 0.3s; }
+.star-animated:nth-child(4) { animation: star-pulse 2s ease-in-out infinite 0.45s; }
+.star-animated:nth-child(5) { animation: star-pulse 2s ease-in-out infinite 0.6s; }
+
+/* ═══════════════════════════════════════
+   HERO CARD CUSTOM ICON ANIMATIONS
+═══════════════════════════════════════ */
+
+/* Web Dev: <> brackets open/close */
+@keyframes bracket-open {
+  0%, 100% { transform: translateX(0); }
+  40%, 60% { transform: translateX(-7px); }
+}
+@keyframes bracket-close-anim {
+  0%, 100% { transform: translateX(0); }
+  40%, 60% { transform: translateX(7px); }
+}
+.bracket-left  { animation: bracket-open       2s ease-in-out infinite; display: inline-block; }
+.bracket-right { animation: bracket-close-anim 2s ease-in-out infinite; display: inline-block; }
+
+/* Automação: Zap neon glow crescente */
+@keyframes zap-neon-grow {
+  0%, 100% { filter: drop-shadow(0 0 0px rgba(0,212,255,0)); }
+  50%       { filter: drop-shadow(0 0 6px rgba(0,212,255,1)) drop-shadow(0 0 16px rgba(99,91,255,0.85)) drop-shadow(0 0 30px rgba(0,212,255,0.5)); }
+}
+.zap-neon { animation: zap-neon-grow 1.8s ease-in-out infinite; }
+
+/* APIs: () parênteses abrir/fechar */
+@keyframes paren-open {
+  0%, 100% { transform: translateX(0); }
+  40%, 60% { transform: translateX(-7px); }
+}
+@keyframes paren-close-anim {
+  0%, 100% { transform: translateX(0); }
+  40%, 60% { transform: translateX(7px); }
+}
+.paren-left  { animation: paren-open       2s ease-in-out infinite; display: inline-block; }
+.paren-right { animation: paren-close-anim 2s ease-in-out infinite; display: inline-block; }
+
+/* Startups: chama do foguete tremeluzente */
+@keyframes flame-flicker {
+  0%, 100% { transform: scaleY(1)   scaleX(1);   opacity: 1;    }
+  20%       { transform: scaleY(1.4) scaleX(0.7); opacity: 0.9;  }
+  40%       { transform: scaleY(0.8) scaleX(1.3); opacity: 1;    }
+  60%       { transform: scaleY(1.3) scaleX(0.8); opacity: 0.85; }
+  80%       { transform: scaleY(0.9) scaleX(1.1); opacity: 1;    }
+}
+.rocket-flame { animation: flame-flicker 0.45s ease-in-out infinite; transform-origin: center top; }
+
+/* Startups: linhas de velocidade diagonal */
+@keyframes speed-line-fly {
+  0%   { opacity: 0.95; transform: translate(0, 0); }
+  100% { opacity: 0;    transform: translate(-13px, 7px); }
+}
+@keyframes speed-line-fly-2 {
+  0%   { opacity: 0.7;  transform: translate(0, 0); }
+  100% { opacity: 0;    transform: translate(-10px, 5px); }
+}
+.speed-line-1 { animation: speed-line-fly   0.7s linear infinite; }
+.speed-line-2 { animation: speed-line-fly-2 0.7s linear infinite 0.25s; }

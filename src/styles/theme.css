@@ -1,0 +1,105 @@
+:root {
+  /* Backgrounds */
+  --color-bg-primary: #0B0D12;
+  --color-bg-secondary: #11141B;
+  --color-bg-tertiary: #171A22;
+
+  /* Surfaces */
+  --color-surface-1: #151922;
+  --color-surface-2: #1C2130;
+  --color-surface-3: #242A3B;
+
+  /* Borders */
+  --color-border-soft: #2A3042;
+  --color-border-strong: #3A4156;
+
+  /* Accent Colors */
+  --color-primary: #635BFF;
+  --color-primary-hover: #7A73FF;
+  --color-accent-blue: #00D4FF;
+  --color-accent-purple: #8A7CFF;
+  --color-accent-pink: #FF7AD9;
+
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #B6BED1;
+  --text-muted: #7E879C;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #635BFF, #8A7CFF, #00D4FF);
+  --gradient-hover: linear-gradient(135deg, #7A73FF, #9B8FFF, #1ADEFF);
+  --gradient-text: linear-gradient(135deg, #635BFF, #8A7CFF, #00D4FF);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 32px rgba(99, 91, 255, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Gradient Text Utility */
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+/* Section Padding */
+.section-padding {
+  padding: var(--space-24) 0;
+}
+
+/* Scroll to top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 50;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow-glow);
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(99, 91, 255, 0.5);
+}
